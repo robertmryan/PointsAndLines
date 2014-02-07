@@ -1,0 +1,497 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		837174D118A53A1C009795FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837174D018A53A1C009795FA /* Foundation.framework */; };
+		837174D318A53A1C009795FA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837174D218A53A1C009795FA /* CoreGraphics.framework */; };
+		837174D518A53A1C009795FA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837174D418A53A1C009795FA /* UIKit.framework */; };
+		837174DB18A53A1C009795FA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 837174D918A53A1C009795FA /* InfoPlist.strings */; };
+		837174DD18A53A1C009795FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 837174DC18A53A1C009795FA /* main.m */; };
+		837174E118A53A1C009795FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 837174E018A53A1C009795FA /* AppDelegate.m */; };
+		837174E418A53A1C009795FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 837174E218A53A1C009795FA /* Main.storyboard */; };
+		837174E718A53A1C009795FA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 837174E618A53A1C009795FA /* ViewController.m */; };
+		837174E918A53A1C009795FA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 837174E818A53A1C009795FA /* Images.xcassets */; };
+		837174F018A53A1C009795FA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837174EF18A53A1C009795FA /* XCTest.framework */; };
+		837174F118A53A1C009795FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837174D018A53A1C009795FA /* Foundation.framework */; };
+		837174F218A53A1C009795FA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837174D418A53A1C009795FA /* UIKit.framework */; };
+		837174FA18A53A1C009795FA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 837174F818A53A1C009795FA /* InfoPlist.strings */; };
+		837174FC18A53A1C009795FA /* PointsAndLinesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 837174FB18A53A1C009795FA /* PointsAndLinesTests.m */; };
+		8371750718A53A3F009795FA /* ChartPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 8371750618A53A3F009795FA /* ChartPoint.m */; };
+		8371750A18A53AA4009795FA /* ChartPointView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8371750918A53AA4009795FA /* ChartPointView.m */; };
+		8371750C18A54A9E009795FA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8371750B18A54A9E009795FA /* README.md */; };
+		8371750E18A54B94009795FA /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = 8371750D18A54B94009795FA /* LICENSE.md */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		837174F318A53A1C009795FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 837174C518A53A1C009795FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 837174CC18A53A1C009795FA;
+			remoteInfo = PointsAndLines;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		837174CD18A53A1C009795FA /* PointsAndLines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PointsAndLines.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		837174D018A53A1C009795FA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		837174D218A53A1C009795FA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		837174D418A53A1C009795FA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		837174D818A53A1C009795FA /* PointsAndLines-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PointsAndLines-Info.plist"; sourceTree = "<group>"; };
+		837174DA18A53A1C009795FA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		837174DC18A53A1C009795FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		837174DE18A53A1C009795FA /* PointsAndLines-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PointsAndLines-Prefix.pch"; sourceTree = "<group>"; };
+		837174DF18A53A1C009795FA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		837174E018A53A1C009795FA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		837174E318A53A1C009795FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		837174E518A53A1C009795FA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		837174E618A53A1C009795FA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		837174E818A53A1C009795FA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		837174EE18A53A1C009795FA /* PointsAndLinesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PointsAndLinesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		837174EF18A53A1C009795FA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		837174F718A53A1C009795FA /* PointsAndLinesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PointsAndLinesTests-Info.plist"; sourceTree = "<group>"; };
+		837174F918A53A1C009795FA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		837174FB18A53A1C009795FA /* PointsAndLinesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PointsAndLinesTests.m; sourceTree = "<group>"; };
+		8371750518A53A3F009795FA /* ChartPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartPoint.h; sourceTree = "<group>"; };
+		8371750618A53A3F009795FA /* ChartPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartPoint.m; sourceTree = "<group>"; };
+		8371750818A53AA4009795FA /* ChartPointView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartPointView.h; sourceTree = "<group>"; };
+		8371750918A53AA4009795FA /* ChartPointView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartPointView.m; sourceTree = "<group>"; };
+		8371750B18A54A9E009795FA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		8371750D18A54B94009795FA /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		837174CA18A53A1C009795FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				837174D318A53A1C009795FA /* CoreGraphics.framework in Frameworks */,
+				837174D518A53A1C009795FA /* UIKit.framework in Frameworks */,
+				837174D118A53A1C009795FA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		837174EB18A53A1C009795FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				837174F018A53A1C009795FA /* XCTest.framework in Frameworks */,
+				837174F218A53A1C009795FA /* UIKit.framework in Frameworks */,
+				837174F118A53A1C009795FA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		837174C418A53A1C009795FA = {
+			isa = PBXGroup;
+			children = (
+				8371750B18A54A9E009795FA /* README.md */,
+				8371750D18A54B94009795FA /* LICENSE.md */,
+				837174D618A53A1C009795FA /* PointsAndLines */,
+				837174F518A53A1C009795FA /* PointsAndLinesTests */,
+				837174CF18A53A1C009795FA /* Frameworks */,
+				837174CE18A53A1C009795FA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		837174CE18A53A1C009795FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				837174CD18A53A1C009795FA /* PointsAndLines.app */,
+				837174EE18A53A1C009795FA /* PointsAndLinesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		837174CF18A53A1C009795FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				837174D018A53A1C009795FA /* Foundation.framework */,
+				837174D218A53A1C009795FA /* CoreGraphics.framework */,
+				837174D418A53A1C009795FA /* UIKit.framework */,
+				837174EF18A53A1C009795FA /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		837174D618A53A1C009795FA /* PointsAndLines */ = {
+			isa = PBXGroup;
+			children = (
+				837174DF18A53A1C009795FA /* AppDelegate.h */,
+				837174E018A53A1C009795FA /* AppDelegate.m */,
+				837174E218A53A1C009795FA /* Main.storyboard */,
+				837174E518A53A1C009795FA /* ViewController.h */,
+				837174E618A53A1C009795FA /* ViewController.m */,
+				8371750818A53AA4009795FA /* ChartPointView.h */,
+				8371750918A53AA4009795FA /* ChartPointView.m */,
+				8371750518A53A3F009795FA /* ChartPoint.h */,
+				8371750618A53A3F009795FA /* ChartPoint.m */,
+				837174E818A53A1C009795FA /* Images.xcassets */,
+				837174D718A53A1C009795FA /* Supporting Files */,
+			);
+			path = PointsAndLines;
+			sourceTree = "<group>";
+		};
+		837174D718A53A1C009795FA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				837174D818A53A1C009795FA /* PointsAndLines-Info.plist */,
+				837174D918A53A1C009795FA /* InfoPlist.strings */,
+				837174DC18A53A1C009795FA /* main.m */,
+				837174DE18A53A1C009795FA /* PointsAndLines-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		837174F518A53A1C009795FA /* PointsAndLinesTests */ = {
+			isa = PBXGroup;
+			children = (
+				837174FB18A53A1C009795FA /* PointsAndLinesTests.m */,
+				837174F618A53A1C009795FA /* Supporting Files */,
+			);
+			path = PointsAndLinesTests;
+			sourceTree = "<group>";
+		};
+		837174F618A53A1C009795FA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				837174F718A53A1C009795FA /* PointsAndLinesTests-Info.plist */,
+				837174F818A53A1C009795FA /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		837174CC18A53A1C009795FA /* PointsAndLines */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 837174FF18A53A1D009795FA /* Build configuration list for PBXNativeTarget "PointsAndLines" */;
+			buildPhases = (
+				837174C918A53A1C009795FA /* Sources */,
+				837174CA18A53A1C009795FA /* Frameworks */,
+				837174CB18A53A1C009795FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PointsAndLines;
+			productName = PointsAndLines;
+			productReference = 837174CD18A53A1C009795FA /* PointsAndLines.app */;
+			productType = "com.apple.product-type.application";
+		};
+		837174ED18A53A1C009795FA /* PointsAndLinesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8371750218A53A1D009795FA /* Build configuration list for PBXNativeTarget "PointsAndLinesTests" */;
+			buildPhases = (
+				837174EA18A53A1C009795FA /* Sources */,
+				837174EB18A53A1C009795FA /* Frameworks */,
+				837174EC18A53A1C009795FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				837174F418A53A1C009795FA /* PBXTargetDependency */,
+			);
+			name = PointsAndLinesTests;
+			productName = PointsAndLinesTests;
+			productReference = 837174EE18A53A1C009795FA /* PointsAndLinesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		837174C518A53A1C009795FA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Robert Ryan";
+				TargetAttributes = {
+					837174ED18A53A1C009795FA = {
+						TestTargetID = 837174CC18A53A1C009795FA;
+					};
+				};
+			};
+			buildConfigurationList = 837174C818A53A1C009795FA /* Build configuration list for PBXProject "PointsAndLines" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 837174C418A53A1C009795FA;
+			productRefGroup = 837174CE18A53A1C009795FA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				837174CC18A53A1C009795FA /* PointsAndLines */,
+				837174ED18A53A1C009795FA /* PointsAndLinesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		837174CB18A53A1C009795FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8371750E18A54B94009795FA /* LICENSE.md in Resources */,
+				837174E918A53A1C009795FA /* Images.xcassets in Resources */,
+				837174DB18A53A1C009795FA /* InfoPlist.strings in Resources */,
+				8371750C18A54A9E009795FA /* README.md in Resources */,
+				837174E418A53A1C009795FA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		837174EC18A53A1C009795FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				837174FA18A53A1C009795FA /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		837174C918A53A1C009795FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				837174E718A53A1C009795FA /* ViewController.m in Sources */,
+				837174E118A53A1C009795FA /* AppDelegate.m in Sources */,
+				8371750A18A53AA4009795FA /* ChartPointView.m in Sources */,
+				837174DD18A53A1C009795FA /* main.m in Sources */,
+				8371750718A53A3F009795FA /* ChartPoint.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		837174EA18A53A1C009795FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				837174FC18A53A1C009795FA /* PointsAndLinesTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		837174F418A53A1C009795FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 837174CC18A53A1C009795FA /* PointsAndLines */;
+			targetProxy = 837174F318A53A1C009795FA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		837174D918A53A1C009795FA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				837174DA18A53A1C009795FA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		837174E218A53A1C009795FA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				837174E318A53A1C009795FA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		837174F818A53A1C009795FA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				837174F918A53A1C009795FA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		837174FD18A53A1D009795FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		837174FE18A53A1D009795FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8371750018A53A1D009795FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PointsAndLines/PointsAndLines-Prefix.pch";
+				INFOPLIST_FILE = "PointsAndLines/PointsAndLines-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8371750118A53A1D009795FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PointsAndLines/PointsAndLines-Prefix.pch";
+				INFOPLIST_FILE = "PointsAndLines/PointsAndLines-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		8371750318A53A1D009795FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PointsAndLines.app/PointsAndLines";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PointsAndLines/PointsAndLines-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "PointsAndLinesTests/PointsAndLinesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		8371750418A53A1D009795FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PointsAndLines.app/PointsAndLines";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PointsAndLines/PointsAndLines-Prefix.pch";
+				INFOPLIST_FILE = "PointsAndLinesTests/PointsAndLinesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		837174C818A53A1C009795FA /* Build configuration list for PBXProject "PointsAndLines" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				837174FD18A53A1D009795FA /* Debug */,
+				837174FE18A53A1D009795FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		837174FF18A53A1D009795FA /* Build configuration list for PBXNativeTarget "PointsAndLines" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8371750018A53A1D009795FA /* Debug */,
+				8371750118A53A1D009795FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8371750218A53A1D009795FA /* Build configuration list for PBXNativeTarget "PointsAndLinesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8371750318A53A1D009795FA /* Debug */,
+				8371750418A53A1D009795FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 837174C518A53A1C009795FA /* Project object */;
+}
