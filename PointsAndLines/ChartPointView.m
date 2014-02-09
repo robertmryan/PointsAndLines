@@ -11,12 +11,25 @@
 
 @implementation ChartPointView
 
+- (id)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    
+    if (self) {
+        self.backgroundColor = [UIColor clearColor];
+        self.chartType = kChartTypeLines | kChartTypePoints;
+        self.maxDistance = frame.size.width / 5.0;
+    }
+    
+    return self;
+}
+
 - (void)drawRect:(CGRect)rect
 {
     CGContextRef context = UIGraphicsGetCurrentContext();
 
-    CGContextSetFillColorWithColor(context, [[UIColor darkGrayColor] CGColor]);
-    CGContextSetStrokeColorWithColor(context, [[UIColor darkGrayColor] CGColor]);
+    CGContextSetFillColorWithColor(context, [self.pointColor CGColor]);
+    CGContextSetStrokeColorWithColor(context, [self.pointColor CGColor]);
 
     // draw the points, if the `chartType` specifies to do so
 
@@ -25,7 +38,7 @@
             [self context:context addChartPoint:chartPoint];
         }
 
-        CGContextDrawPath(context, kCGPathEOFill);
+        CGContextDrawPath(context, kCGPathFill);
     }
 
     // draw the lines, if the `chartType` specifies to do so
@@ -71,10 +84,16 @@
         // now draw lines to the three closest points
         // (skipping 0, because that's probably the current point)
 
-        for (NSInteger i = 1; i <= numberOfLines && i < [sortedChartPoints count]; i++)
-            [self context:context addLineFromChartPoint:chartPoint toChartPoint:sortedChartPoints[i]];
+        for (NSInteger i = 1; i <= numberOfLines && i < [sortedChartPoints count]; i++) {
+            CGFloat distance = [chartPoint distanceToPoint:sortedChartPoints[i]];
+            
+            if (distance <= self.maxDistance)
+                [self context:context addLineFromChartPoint:chartPoint toChartPoint:sortedChartPoints[i]];
+        }
     }];
 }
+
+#pragma mark - Setters that automatically flag the view as needing to be redrawn
 
 - (void)setChartType:(ChartType)chartType
 {
@@ -85,6 +104,18 @@
 - (void)setChartPoints:(NSArray *)chartPoints
 {
     _chartPoints = chartPoints;
+    [self setNeedsDisplay];
+}
+
+- (void)setPointColor:(UIColor *)pointColor
+{
+    _pointColor = pointColor;
+    [self setNeedsDisplay];
+}
+
+- (void)setMaxDistance:(CGFloat)maxDistance
+{
+    _maxDistance = maxDistance;
     [self setNeedsDisplay];
 }
 

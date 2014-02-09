@@ -18,5 +18,7 @@ typedef NS_OPTIONS(NSInteger, ChartType) {
 
 @property (nonatomic)         ChartType  chartType;
 @property (nonatomic, strong) NSArray   *chartPoints;
+@property (nonatomic, strong) UIColor   *pointColor;
+@property (nonatomic)         CGFloat    maxDistance;
 
 @end
