@@ -12,8 +12,6 @@
 
 @interface ViewController ()
 
-@property (weak, nonatomic) IBOutlet ChartPointView *chartPointView;
-
 @end
 
 @implementation ViewController
@@ -22,29 +20,59 @@
 {
     [super viewDidLoad];
 
-    self.chartPointView.chartType = kChartTypePoints;
+    CGRect frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.width);
+    
+    ChartPointView *view1 = [[ChartPointView alloc] initWithFrame:frame];
+    view1.chartPoints = [self generateRandomPoints:100 forView:view1];
+    [self.view addSubview:view1];
+    
+    ChartPointView *view2 = [[ChartPointView alloc] initWithFrame:frame];
+    view2.chartPoints = [self generateRandomPoints:100 forView:view2];
+    [self.view addSubview:view2];
+    
+    ChartPointView *view3 = [[ChartPointView alloc] initWithFrame:frame];
+    view3.chartPoints = [self generateRandomPoints:10 forView:view3];
+    view3.pointColor = [UIColor redColor];
+    view3.chartType = kChartTypePoints;
+    [self.view addSubview:view3];
+    
+    view2.alpha = 0.0;
+    view2.transform = CGAffineTransformMakeScale(0.1, 0.1);
+    view3.alpha = 0.0;
 
-    self.chartPointView.chartPoints = @[[ChartPoint chartPointWithCenter:CGPointMake(20,80)  radius:5],
-                                        [ChartPoint chartPointWithCenter:CGPointMake(120,60) radius:5],
-                                        [ChartPoint chartPointWithCenter:CGPointMake(60,74)  radius:5],
-                                        [ChartPoint chartPointWithCenter:CGPointMake(80,88)  radius:5],
-                                        [ChartPoint chartPointWithCenter:CGPointMake(100,93) radius:5],
-                                        [ChartPoint chartPointWithCenter:CGPointMake(20,20)  radius:5],
-                                        [ChartPoint chartPointWithCenter:CGPointMake(160,70) radius:5],
-                                        [ChartPoint chartPointWithCenter:CGPointMake(128,68) radius:5],
-                                        [ChartPoint chartPointWithCenter:CGPointMake(90,60)  radius:5],
-                                        [ChartPoint chartPointWithCenter:CGPointMake(110,80) radius:5]];
+    [UIView animateWithDuration:0.5 delay:2.0 options:0 animations:^{
+        view2.alpha = 1.0;
+        view2.transform = CGAffineTransformIdentity;
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.5 delay:0.5 options:0 animations:^{
+            view2.alpha = 0.0;
+            view2.transform = CGAffineTransformMakeScale(3.0, 3.0);
+        } completion:^(BOOL finished) {
+            [view2 removeFromSuperview];
+            [UIView animateWithDuration:0.5 delay:0.25 options:0 animations:^{
+                view3.alpha = 1.0;
+            } completion:nil];
+        }];
+    }];
+}
 
-    double delayInSeconds = 3.0;
-    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
-    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-
-        // I'm going to change the chart type, but I'm going to cross dissolve it to make it less jarring
-
-        [UIView transitionWithView:self.chartPointView duration:0.2 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
-            self.chartPointView.chartType = kChartTypePoints | kChartTypeLines;
-        } completion:nil];
-    });
+- (NSArray *)generateRandomPoints:(NSInteger)count forView:(ChartPointView *)view
+{
+    NSMutableArray *points = [NSMutableArray array];
+    CGPoint center = view.center;
+    CGFloat pointRadius = 5.0;
+    CGFloat width = view.frame.size.width - pointRadius * 2.0;
+    CGFloat distance;
+    
+    while ([points count] < count) {
+        CGPoint point = CGPointMake(arc4random_uniform(width) + pointRadius, arc4random_uniform(width) + pointRadius);
+        distance = hypotf(point.x - center.x, point.y - center.y);
+        if (distance < width / 2.0) {
+            [points addObject:[ChartPoint chartPointWithCenter:point radius:pointRadius]];
+        }
+    }
+    
+    return points;
 }
 
 - (void)didReceiveMemoryWarning
